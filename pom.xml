@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>org.aiolabs.projects</groupId>
     <artifactId>converter</artifactId>
@@ -18,17 +18,45 @@
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <pitest-maven.version>1.7.2</pitest-maven.version>
         <pitest-junit5-plugin.version>0.15</pitest-junit5-plugin.version>
+        <opencsv.version>5.5.2</opencsv.version>
+        <jackson-databind.version>2.13.1</jackson-databind.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>${opencsv.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -144,5 +172,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
