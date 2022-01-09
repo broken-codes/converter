@@ -3,7 +3,7 @@ package org.aiolabs.projects.converter.processors;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aiolabs.projects.converter.configurations.ConfigurationProps;
-import org.aiolabs.projects.converter.services.contracts.ObservableTypeReader;
+import org.aiolabs.projects.converter.types.contracts.ObservableTypeReader;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 

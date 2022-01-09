@@ -21,7 +21,7 @@
         <opencsv.version>5.5.2</opencsv.version>
         <jackson-databind.version>2.13.1</jackson-databind.version>
         <commons-io.version>2.11.0</commons-io.version>
-        <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
+        <openpojo.version>0.9.1</openpojo.version>
     </properties>
     <dependencies>
         <dependency>
@@ -30,13 +30,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>${hibernate-validator.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -62,6 +61,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.openpojo</groupId>
+            <artifactId>openpojo</artifactId>
+            <version>${openpojo.version}</version>
         </dependency>
     </dependencies>
 
@@ -96,6 +100,7 @@
                                 <exclude>org/aiolabs/projects/converter/ConverterApplication.class</exclude>
                                 <exclude>org/aiolabs/projects/converter/configurations/**</exclude>
                                 <exclude>org/aiolabs/projects/converter/exceptions/**</exclude>
+                                <exclude>org/aiolabs/projects/converter/runners/**</exclude>
                             </excludes>
                         </configuration>
                         <executions>
@@ -165,6 +170,7 @@
                                 <class>org.aiolabs.projects.converter.ConverterApplication</class>
                                 <class>org.aiolabs.projects.converter.configurations.*</class>
                                 <class>org.aiolabs.projects.converter.exceptions.*</class>
+                                <class>org.aiolabs.projects.converter.runners.*</class>
                             </excludedClasses>
                         </configuration>
                     </plugin>

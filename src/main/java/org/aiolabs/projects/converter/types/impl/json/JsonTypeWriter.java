@@ -1,4 +1,4 @@
-package org.aiolabs.projects.converter.services.impl;
+package org.aiolabs.projects.converter.types.impl.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -7,7 +7,8 @@ import org.aiolabs.projects.converter.annotations.Observer;
 import org.aiolabs.projects.converter.beans.Profile;
 import org.aiolabs.projects.converter.configurations.ConfigurationProps;
 import org.aiolabs.projects.converter.exceptions.ConverterException;
-import org.aiolabs.projects.converter.services.contracts.ObservingTypeWriter;
+import org.aiolabs.projects.converter.types.contracts.ObservingTypeWriter;
+import org.aiolabs.projects.converter.types.impl.ConverterIOUtilsImpl;
 
 import javax.annotation.PostConstruct;
 import java.io.File;

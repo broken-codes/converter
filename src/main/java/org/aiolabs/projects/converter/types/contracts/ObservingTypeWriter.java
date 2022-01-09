@@ -1,4 +1,4 @@
-package org.aiolabs.projects.converter.services.contracts;
+package org.aiolabs.projects.converter.types.contracts;
 
 import java.util.concurrent.CompletableFuture;
 

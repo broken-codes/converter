@@ -3,8 +3,8 @@ application:
   output-formats:
     - JSON
   paths:
-    input-file-name: /home/nicky/in-csv/test-10000000.csv
-    output-file-location: /home/nicky/out
+    input-file-name: /home/nicky/in-csv/test-3.csv
+    output-file-location: /home/nicky/out-csv
 logging:
   level:
     root: INFO

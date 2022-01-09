@@ -1,8 +1,7 @@
-package org.aiolabs.projects.converter.services.impl;
+package org.aiolabs.projects.converter.validations;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aiolabs.projects.converter.beans.Profile;
-import org.aiolabs.projects.converter.services.contracts.BeanValidator;
 import org.springframework.stereotype.Component;
 
 import javax.validation.ConstraintViolation;

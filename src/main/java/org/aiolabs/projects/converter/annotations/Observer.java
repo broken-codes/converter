@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 /**
  * All writers should be marked with this annotation. The annotation extends the functionalities already provided by
  * {@link Component} annotation. Note that for an {@link Observer} to get notifications from
- * {@link org.aiolabs.projects.converter.services.contracts.ObservableTypeReader} it should both be enabled and listed
+ * {@link org.aiolabs.projects.converter.types.contracts.ObservableTypeReader} it should both be enabled and listed
  * in the configuration files.
  */
 @Component

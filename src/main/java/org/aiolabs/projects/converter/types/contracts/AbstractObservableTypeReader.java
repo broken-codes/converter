@@ -1,9 +1,10 @@
-package org.aiolabs.projects.converter.services.contracts;
+package org.aiolabs.projects.converter.types.contracts;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aiolabs.projects.converter.annotations.Observer;
 import org.aiolabs.projects.converter.configurations.ConfigurationProps;
 import org.aiolabs.projects.converter.exceptions.ConverterException;
+import org.aiolabs.projects.converter.validations.BeanValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
@@ -71,5 +72,10 @@ public abstract class AbstractObservableTypeReader<T> implements ObservableTypeR
             log.error(ERROR_NO_WRITER_CONFIGURED);
             throw new ConverterException(ERROR_NO_WRITER_CONFIGURED);
         }
+    }
+
+    @Autowired
+    public final void setValidator(BeanValidator<T> validator) {
+        this.validator = validator;
     }
 }
