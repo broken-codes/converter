@@ -1,5 +1,6 @@
 package org.aiolabs.projects.converter.types.impl;
 
+import org.aiolabs.projects.converter.exceptions.ConverterException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ConverterIOUtilsImplTest {
 
@@ -49,5 +51,10 @@ class ConverterIOUtilsImplTest {
 
         File nonExistingDirectoryFile = Paths.get("src/test/resources/test_dir_not_existing").toFile();
         nonExistingDirectoryFile.delete();
+    }
+
+    @Test
+    void reader() {
+        assertThrows(ConverterException.class, () -> sut.reader("*"));
     }
 }

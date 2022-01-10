@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.StringJoiner;
 
@@ -15,6 +16,7 @@ import java.util.StringJoiner;
 @AllArgsConstructor
 public class Profile {
 
+    @NotEmpty(message = "First name cannot be null.")
     @NotNull(message = "First name cannot be null.")
     private String firstName;
 

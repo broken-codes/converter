@@ -53,11 +53,9 @@ public abstract class AbstractObservableTypeReader<T> implements ObservableTypeR
             log.error(String.format("Validation failed for the object: %s found at position: %s", data, dataPositionInFile));
             return;
         }
-        long elementsPublished = observers.stream()
+        observers.stream()
                 .map(it -> it.write(data, dataPositionInFile))
-                .peek(CompletableFuture::join)
-                .count();
-        log.debug("Finished publishing {} elements.", elementsPublished);
+                .forEach(CompletableFuture::join);
     }
 
     @Autowired

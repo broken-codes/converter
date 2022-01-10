@@ -1,8 +1,9 @@
 application:
-  runner: false
+  runner:
+    enabled: false
   seprator: ","
   output-formats:
     - JSON
   paths:
     input-file-name: src/test/resources/input/all_valid_records.csv
-    output-file-location: src/test/generated
+    output-file-location: /home/nicky/out-csv
