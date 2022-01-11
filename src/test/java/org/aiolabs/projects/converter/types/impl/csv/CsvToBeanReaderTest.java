@@ -2,8 +2,12 @@ package org.aiolabs.projects.converter.types.impl.csv;
 
 import com.opencsv.bean.CsvToBean;
 import org.aiolabs.projects.converter.beans.Profile;
+import org.aiolabs.projects.converter.configurations.ConfigurationProps;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -12,11 +16,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CsvToBeanReaderTest {
 
+    @InjectMocks
     CsvToBeanReader sut;
+
+    @Mock
+    ConfigurationProps properties;
 
     @BeforeEach
     void setUp() {
-        sut = new CsvToBeanReader();
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
